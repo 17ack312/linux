@@ -3,8 +3,8 @@ import os
 
 os.system("apt update && apt upgrade -y")
 
-os.system("apt list >> /$HOME/list.txt")
-file="/$HOME/list.txt"
+os.system("apt list >> $HOME/list.txt")
+file="$HOME/list.txt"
 f =open(file,"r")
 
 for i in f:
@@ -12,12 +12,12 @@ for i in f:
     temp=re.split("/",line)
    # print(temp[0])
     string="apt install -y "+temp[0]+"\n"
-    g=open("/root/applist.txt","a")
+    g=open("$HOME/applist.txt","a")
     g.write(string)
 
 q=input("\n[?]Do you want to view installer documentation ??(Y/n)\n[>] ").lower()
 
 if q=='y' or q=='yes':
-    os.system("cat /root/applist.txt")
+    os.system("cat $HOME/applist.txt")
 
-os.system("rm list.txt")
+os.system("rm $HOME/list.txt")
