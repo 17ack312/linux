@@ -43,5 +43,5 @@ fi
 
 cd
 pip3 install -r $folder/pip.txt
-pip3 install numpy anaconda conda matplotlib pandas panda sklearn jupyter
+pip3 install bs4 numpy anaconda conda matplotlib pandas panda sklearn jupyter
 
