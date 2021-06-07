@@ -1,0 +1,43 @@
+wog='\033[1;100m'  
+off='\033[0m' 
+fgr='\033[1;90m'    
+fr='\033[1;31m'    
+fg='\033[1;32m'   
+fy='\033[1;33m'
+fb='\033[1;34m'
+fp='\033[1;35m'
+fs='\033[1;36m'
+fw='\033[1;37m'    
+bow='\033[1;07m'
+br='\033[0;41m'
+bg='\033[0;42m'
+by='\033[0;43m'
+bb='\033[0;44m'
+bp='\033[0;45m'
+bs='\033[0;46m'
+bw='\033[0;47m'
+bk='\033[0;30m'
+un='\033[0;04m'
+it='\033[0;03m'
+
+clear
+
+echo -e $fr"\t=============================="
+echo -e $fr"\t|"$fy "     [>]  M E N U  [<]     "$fr"|"
+echo -e $fr"\t=============================="
+#echo -e $fr"\t|"$fg" [1]. Basic Requirements    "$fr"|"
+echo -e $fr"\t|"$fg" [1]. All Basic Packages    "$fr"|"
+echo -e $fr"\t|"$fg" [2]. Python Pip Packages   "$fr"|"
+echo -e $fr"\t|"$fg" [3]. SQLMap                "$fr"|"
+echo -e $fr"\t|"$fg" [4]. Metasploit Framework  "$fr"|"
+echo -e $fr"\t|"$fg" [5]. NMAP                  "$fr"|"
+echo -e $fr"\t|"$fg" [6]. Weevely               "$fr"|"
+echo -e $fr"\t|"$fg" [7]. Slowloris             "$fr"|"
+echo -e $fr"\t|"$fg" [8]. Hydra                 "$fr"|"
+echo -e $fr"\t|"$fg" [9]. WireShark             "$fr"|"
+echo -e $fr"\t|"$fg" [10].GUI for KALI WSL      "$fr"|"
+#echo -e $fr"\t|"$fg" [5]. "$fr"|"
+#echo -e $fr"\t|"$fg" [5]. "$fr"|"
+echo -e $fr"\t|"$fg" [0]. EXIT                  "$fr"|"
+echo -e $fr"\t=============================="
+

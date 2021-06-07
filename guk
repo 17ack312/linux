@@ -1,0 +1,12 @@
+
+folder=$1'/temp'
+file = $folder/os.txt
+cat /etc/os-release > $folder/os.txt
+if [ -e $folder/guk.py ]
+then
+cd $folder
+wget https://raw.githubusercontent.com/17ack312/linux/main/guk.py
+fi
+cd $folder
+python3 guk.py $file
+

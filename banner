@@ -1,0 +1,100 @@
+wog='\033[1;100m'
+off='\033[0m'
+fgr='\033[1;90m'
+fr='\033[1;31m'
+fg='\033[1;32m'
+fy='\033[1;33m'
+fb='\033[1;34m'
+fp='\033[1;35m'
+fs='\033[1;36m'
+fw='\033[1;37m'
+bow='\033[1;07m'
+br='\033[0;41m'
+bg='\033[0;42m'
+by='\033[0;43m'
+bb='\033[0;44m'
+bp='\033[0;45m'
+bs='\033[0;46m'
+bw='\033[0;47m'
+bk='\033[0;30m'
+un='\033[0;04m'
+it='\033[0;03m'
+
+arg=$1
+
+if [ $arg -eq 1 ]
+then
+echo -e $wog"\t=========================="$off
+echo -e $wog"\t|Basic Package Installer |"$off
+echo -e $wog"\t=========================="$off
+fi
+
+if [ $arg -eq 2 ] 
+then
+echo -e $wog"\t=========================================="$off
+echo -e $wog"\t|    Python Pip Requirements Fulfiller   |"$off
+echo -e $wog"\t=========================================="$off
+fi
+
+if [ $arg -eq 3 ]
+then
+echo -e $wog"\t===================================="$off
+echo -e $wog"\t|         SQLMAP installer         |"$off
+echo -e $wog"\t===================================="$off
+fi
+
+if [ $arg -eq 4 ]
+then
+echo -e $wog"\t===================================="$off
+echo -e $wog"\t|  Metasploit Framework Installer  |"$off
+echo -e $wog"\t===================================="$off
+
+fi
+
+if [ $arg -eq 5 ]
+then
+echo -e $wog"=========================="$off
+echo -e $wog"|     NMAP  Installer    |"$off
+echo -e $wog"=========================="$off
+fi
+
+if [ $arg -eq 6 ]
+then
+echo -e $wog"============================"$off
+echo -e $wog"| Weevely Shell Generator  |"$off
+echo -e $wog"============================"$off
+fi
+
+if [ $arg -eq 7 ]
+then
+echo -e $wog"============================"$off
+echo -e $wog"|  Slowloris  (DDOS Tool)  |"$off
+echo -e $wog"============================"$off
+fi
+
+if [ $arg -eq 8 ]
+then
+echo -e $wog"=========================="$off
+echo -e $wog"|    Hydra  Installer    |"$off
+echo -e $wog"=========================="$off
+fi
+
+if [ $arg -eq 9 ]
+then
+echo -e $wog"=========================="$off
+echo -e $wog"|  WireShark  Installer  |"$off
+echo -e $wog"=========================="$off
+fi
+
+if [ $arg -eq 10 ]
+then
+echo -e $wog"=========================================="$off
+echo -e $wog"| Graphical User Interface for kali WSL  |"$off
+echo -e $wog"=========================================="$off
+fi
+
+
+if [ $arg -lt 1 -o $arg -gt 6 ]
+then
+echo -e $wog$fs"TRY AGAIN"$off
+fi
