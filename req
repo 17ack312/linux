@@ -34,7 +34,7 @@ wget https://raw.githubusercontent.com/17ack312/linux/main/applist.py
  
 cd $folder
 chmod +x *
-#python3 $folder/applist.py
+python3 $folder/applist.py
 chmod +x *
 echo -e $fr"[?] Do You want to install the packages ?[Y/n] : \c"
 read q
