@@ -45,6 +45,7 @@ echo -e $off" "
 
 folder=$HOME'/temp'
 echo -e $fs"[!]Checking for require files...."$fg
+
 if [ -d $folder ]
 then
 cd $folder
@@ -96,6 +97,8 @@ case $c in
 0)
 clear
 echo -e $fr"EXITING...."
+cd $HOME
+rm -rf temp
 exit -y
 ;;
 
@@ -109,12 +112,14 @@ wget https://raw.githubusercontent.com/17ack312/linux/main/req
 fi
 bash $folder/banner 1
 bash $folder/req $HOME
+cd && bash li_req
 ;;
 
 2)
 cd $folder
 bash $folder/banner 2
 bash $folder/pypip $HOME
+cd && bash li_req
 ;;
 
 3)
@@ -129,6 +134,7 @@ else
 cd $HOME
 git clone https://github.com/sqlmapproject/sqlmap.git
 fi
+cd && bash li_req
 ;;
 
 4)
@@ -141,6 +147,7 @@ apt install -y metasploit-framework
 else
 echo -e $fr"[X] MSF WILL BE AVAILABLE FOR YOUR DEVICE SOON [X]"$off
 fi
+cd && bash li_req
 ;;
 
 5)
@@ -148,18 +155,21 @@ cd $folder
 bash banner 5
 apt install -y nmap
 pip3 install nmap
+cd && bash li_req
 ;;
 
 6)
 cd $folder
 bash banner 6
 apt install -y weevely
+cd && bash li_req
 ;;
 
 7)
 cd $folder
 bash banner 7
 pip3 install slowloris
+cd && bash li_req
 ;;
 
 8)
@@ -167,6 +177,7 @@ cd $folder
 bash banner 8
 apt install -y hydra
 apt install -y hydra-gtk
+cd && bash li_req
 ;;
 
 9)
@@ -174,6 +185,7 @@ cd $folder
 bash banner 9
 apt install -y wireshark
 apt install -y wireshark-gtk
+cd && bash li_req
 ;;
 
 10)
@@ -181,6 +193,7 @@ cd $folder
 bash banner 10
 echo -e $fg"[>]Getting GUI ready for you..."
 bash $folder/guk $HOME
+cd && bash li_req
 ;;
 
 *)
