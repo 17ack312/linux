@@ -36,7 +36,7 @@ cd $folder
 chmod +x *
 python3 pypip.py $HOME
 else
-#wget https://raw.githubusercontent.com/17ack312/linux/main/pypip.py
+wget https://raw.githubusercontent.com/17ack312/linux/main/pypip.py
 chmod +x *
 #python3 pypip.py $HOME
 fi
