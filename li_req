@@ -1,0 +1,205 @@
+wog='\033[1;100m'  
+off='\033[0m' 
+fgr='\033[1;90m'    
+fr='\033[1;31m'    
+fg='\033[1;32m'   
+fy='\033[1;33m'
+fb='\033[1;34m'
+fp='\033[1;35m'
+fs='\033[1;36m'
+fw='\033[1;37m'    
+bow='\033[1;07m'
+br='\033[0;41m'
+bg='\033[0;42m'
+by='\033[0;43m'
+bb='\033[0;44m'
+bp='\033[0;45m'
+bs='\033[0;46m'
+bw='\033[0;47m'
+bk='\033[0;30m'
+un='\033[0;04m'
+it='\033[0;03m'
+clear
+echo -e $wog"\t\t\t============================================"$off
+echo -e $wog"\t\t\t|  linux basic requirement fulfill script  |"$off
+echo -e $wog"\t\t\t============================================"$off
+echo -e $fr"[!]Press ENTER to Continue[!]"
+read enter
+echo -e $fs"Looking for update..."
+apt update && apt upgrade -y 
+echo -e $fb"\n"
+apt install -y figlet
+clear
+echo -e "\n"
+echo -e $fg"*******************************"
+echo -e $fg"****      written by      *****"
+echo -e $fg"*******************************"
+echo -e $fp"==============================="
+echo       Rajdeep  |figlet
+echo -e $fp"==============================="$fg
+echo -e $fr"[!]Press ENTER to Continue[!]"
+read enter
+apt install -y git 
+apt install -y python3
+echo -e $off" "
+
+folder=$HOME'/temp'
+echo -e $fs"[!]Checking for require files...."$fg
+if [ -d $folder ]
+then
+cd $folder
+else
+cd $HOME
+mkdir temp
+cd $folder
+fi
+
+if [-e $folder/menu ]
+then
+cd $folder
+wget https://raw.githubusercontent.com/17ack312/linux/main/menu
+fi
+
+if [-e $folder/banner ]
+then
+cd $folder
+wget https://raw.githubusercontent.com/17ack312/linux/main/banner
+fi
+
+
+if [-e $folder/guk ]
+then
+cd $folder
+wget https://raw.githubusercontent.com/17ack312/linux/main/guk
+fi
+
+
+if [-e $folder/pypip ]
+then
+cd $folder
+wget https://github.com/17ack312/linux/blob/main/pypip
+
+fi
+
+
+clear
+
+
+cd $folder
+chmod +x *
+bash $folder/menu
+echo -e $fr"[=] Enter Your Choice : \c"
+read c
+
+case $c in
+
+0)
+clear
+echo -e $fr"EXITING...."
+exit -y
+;;
+
+
+1)
+cd $folder
+echo -e $fy"[!]Checking for require files ...\n"
+if [ -e $folder/req ]
+then
+wget https://raw.githubusercontent.com/17ack312/linux/main/req
+fi
+bash $folder/banner 1
+bash $folder/req $HOME
+;;
+
+2)
+cd $folder
+bash $folder/banner 2
+bash $folder/pypip $HOME
+;;
+
+3)
+cd $HOME
+bash $folder/banner 3
+echo -e $fr"[>]Getting SQLMAP..."$fg
+
+if [ "$HOME" = /root ]
+then
+apt install -y sqlmap 
+else
+cd $HOME
+git clone https://github.com/sqlmapproject/sqlmap.git
+fi
+;;
+
+4)
+cd $folder
+bash $folder/banner 4
+echo -e $fp"[!]Getting METASPLOIT FRAMEWORK...."$fg
+if [ "$HOME"=/root ]
+then
+apt install -y metasploit-framework
+else
+echo -e $fr"[X] MSF WILL BE AVAILABLE FOR YOUR DEVICE SOON [X]"$off
+fi
+;;
+
+5)
+cd $folder
+bash banner 5
+apt install -y nmap
+pip3 install nmap
+;;
+
+6)
+cd $folder
+bash banner 6
+apt install -y weevely
+;;
+
+7)
+cd $folder
+bash banner 7
+pip3 install slowloris
+;;
+
+8)
+cd $folder
+bash banner 8
+apt install -y hydra
+apt install -y hydra-gtk
+;;
+
+9)
+cd $folder
+bash banner 9
+apt install -y wireshark
+apt install -y wireshark-gtk
+;;
+
+10)
+cd $folder
+bash banner 10
+echo -e $fg"[>]Getting GUI ready for you..."
+bash $folder/guk $HOME
+;;
+
+*)
+echo -e $fr"[X] TRY AGAIN [X]"
+;;
+
+esac
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
