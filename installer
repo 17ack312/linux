@@ -119,15 +119,15 @@ exit && exit
 cd $folder
 bash banner 1
 echo -e $fy"[!] Getting list ready ...\n"
-echo -e $fs"[?] Do you want to install pre-packages?(Y/n) : \c "
-read q
-if [ "$q" = y -o "$q" = Y ]
-then
+#echo -e $fs"[?] Do you want to install pre-packages?(Y/n) : \c "
+#read q
+#if [ "$q" = y -o "$q" = Y ]
+#then
 cd $folder
 wget https://raw.githubusercontent.com/17ack312/linux/main/install
 chmod +x *
 bash install 1
-fi
+#fi
 wget https://raw.githubusercontent.com/17ack312/linux/main/applist.py
 chmod +x *
 python3 applist.py $HOME
