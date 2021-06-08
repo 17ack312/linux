@@ -22,6 +22,7 @@ it='\033[0;03m'
 
 arg=$1
 
+echo -e $off"\t  "$off
 if [ $arg -eq 1 ]
 then
 echo -e $wog"\t=========================="$off
