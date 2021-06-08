@@ -1,0 +1,308 @@
+wog='\033[1;100m'
+off='\033[0m'
+fgr='\033[1;90m'
+fr='\033[1;31m'
+fg='\033[1;32m'
+fy='\033[1;33m'
+fb='\033[1;34m'
+fp='\033[1;35m'
+fs='\033[1;36m'
+fw='\033[1;37m'
+bow='\033[1;07m'
+br='\033[0;41m'
+bg='\033[0;42m'
+by='\033[0;43m'
+bb='\033[0;44m'
+bp='\033[0;45m'
+bs='\033[0;46m'
+bw='\033[0;47m'
+bk='\033[0;30m'
+un='\033[0;04m'
+it='\033[0;03m'
+clear
+echo -e $off
+echo -e $wog"\t\t\t[============================================]"$off
+echo -e $wog"\t\t\t|   Linux Packages & Tools Installer Script  |"$off
+echo -e $wog"\t\t\t[============================================]"$off
+
+echo -e $fs"Looking for update..."
+apt update && apt upgrade -y
+echo -e $fb"\n"
+apt install -y figlet
+
+echo -e $fr"[!] Press ENTER to Continue [!]"
+read enter
+
+clear
+
+echo -e "\n"
+echo -e $fg"[*****************************]"
+echo -e $fg"[>>>      written by      <<<>]"
+echo -e $fg"[*****************************]"
+echo -e $fp"[=============================]"
+echo       Rajdeep  |figlet
+echo -e $fp"[=============================]"
+echo -e "\n"
+echo -e $fr"[!] Press ENTER to Continue [!]"$fg
+read enter
+
+apt install -y git
+apt install -y python3
+apt install -y python2
+apt install -y wget                                
+echo -e $off" "
+
+folder=$HOME'/temp'
+cd $HOME
+
+if [ -d $folder ]
+then
+cd $folder
+else
+cd $HOME
+mkdir $folder
+cd $folder
+fi
+
+if [ -e $folder/banner ]
+then
+cd $folder
+chmod +x *
+else
+cd $folder
+wget https://raw.githubusercontent.com/17ack312/linux/main/banner
+chmod +x *
+fi
+
+
+clear
+my(){
+echo -e $fr"\t=============================="
+echo -e $fr"\t|"$fy "     [>]  M E N U  [<]     "$fr"|"
+echo -e $fr"\t=============================="
+#echo -e $fr"\t|"$fg" [1]. Basic Requirements    "$fr"|"
+echo -e $fr"\t|"$fg" [1]. All Basic Packages    "$fr"|"
+echo -e $fr"\t|"$fg" [2]. Python Pip Packages   "$fr"|"
+echo -e $fr"\t|"$fg" [3]. SQLMap                "$fr"|"
+echo -e $fr"\t|"$fg" [4]. Metasploit Framework  "$fr"|"
+echo -e $fr"\t|"$fg" [5]. NMAP                  "$fr"|"
+echo -e $fr"\t|"$fg" [6]. Weevely               "$fr"|"
+echo -e $fr"\t|"$fg" [7]. Slowloris             "$fr"|"
+echo -e $fr"\t|"$fg" [8]. Hydra                 "$fr"|"
+echo -e $fr"\t|"$fg" [9]. WireShark             "$fr"|"
+echo -e $fr"\t|"$fg" [10].GUI for KALI WSL      "$fr"|"
+#echo -e $fr"\t|"$fg" [5]. "$fr"|"
+#echo -e $fr"\t|"$fg" [5]. "$fr"|"
+echo -e $fr"\t|"$fg" [0]. EXIT                  "$fr"|"
+echo -e $fr"\t=============================="$off
+
+
+echo -e $fr"[=] Enter Your Choice : \c"
+read c
+
+case $c in
+
+0)
+
+clear
+echo -e $fr"EXITING...."
+cd $HOME
+rm -rf $HOME/temp
+exit && exit
+
+;;
+
+
+
+1)
+
+cd $folder
+bash banner 1
+echo -e $fy"[!] Getting list ready ...\n"
+wget https://raw.githubusercontent.com/17ack312/linux/main/applist.py
+chmod +x *
+python3 applist.py $HOME
+echo -e $fr"[?] Do you want to install all packages ? (y/n) : \c"
+read q
+
+if [ "$q" = y -o "$q" = Y ]
+then
+cd $folder
+chmod +x *
+bash applist.txt
+fi
+
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+;;
+
+2)
+
+cd $folder 
+bash banner 2
+echo -e $fr"[>] Collecting requirements ..."$fp
+pip3 install --upgrade pip
+
+if [ -e $folder/pypip.py ]
+then
+cd $folder
+chmod +x *
+python3 pypip.py $HOME
+else
+wget https://raw.githubusercontent.com/17ack312/linux/main/pypip.py
+chmod +x *
+python3 pypip.py $HOME
+fi
+
+cd $folder
+chmod +x *
+pip3 install -r $folder/pip.txt
+pip3 install numpy anaconda conda matplotlib pandas panda sklearn jupyter
+
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+;;
+
+3)
+cd $HOME
+bash banner 3
+echo -e $fr"[>]Getting SQLMAP..."$fg
+
+if [ "$HOME" = /root ]
+then
+apt install -y sqlmap
+else
+cd $HOME
+git clone https://github.com/sqlmapproject/sqlmap.git
+fi
+
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+;;
+
+4)
+cd $folder
+bash banner 4
+echo -e $fp"[!]Getting METASPLOIT FRAMEWORK...."$fg
+if [ "$HOME"=/root ]
+then
+apt install -y metasploit-framework
+else
+echo -e $fr"[X] MSF WILL BE AVAILABLE FOR YOUR DEVICE SOON [X]"$off
+fi
+
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+;;
+
+
+5)
+cd $folder
+bash banner 5
+apt install -y nmap
+pip3 install nmap
+
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+;;
+
+6)
+cd $folder
+bash banner 6
+echo -e $fb"[>] Looking for Weevely..."$fg
+apt install -y weevely
+
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+;;
+
+7)
+cd $folder
+bash banner 7
+echo -e " "$fg
+pip3 install slowloris
+
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+
+;;
+
+8)
+cd $folder
+bash banner 8
+echo -e $fr"[>] Getting Hydra fro you ..."$fb
+apt install -y hydra
+apt install -y hydra-gtk
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+
+;;
+
+9)
+cd $folder
+bash banner 9
+echo -e $fr"[>]Getting Wireshark..."$fp
+apt install -y wireshark
+apt install -y wireshark-gtk
+
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+
+;;
+
+10)
+cd $folder
+bash banner 10
+echo -e $fg"[>]Getting GUI ready for you..."
+echo -e $fr"[!] Only For KALI WSL [!]"$fb
+apt install -y kali-win-kex
+echo -e $fy"[>] All set !! type KEX to run GUI !!"
+
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+
+;;
+
+*)
+echo -e $fr"[X] TRY AGAIN [X]"
+echo -e $fr"[?] Press Enter to continue [?]"
+read enter
+
+my
+
+;;
+
+esac
+
+}
+
+my
