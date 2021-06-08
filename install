@@ -19,6 +19,7 @@ bw='\033[0;47m'
 bk='\033[0;30m'
 un='\033[0;04m'
 it='\033[0;03m'
+clear
 echo -e "\n"
 echo -e $fg"*******************************"
 echo -e $fg"****      written by      *****"
@@ -26,11 +27,18 @@ echo -e $fg"*******************************"
 echo -e $fp================================
 echo       Rajdeep  |figlet
 echo -e $fp================================
+
+if [ $1 -eq $NONE ]
+then
 echo -e $wog$fw"\nenter your choice: \n1.requirements\t\t2.nmap\n3.metasploit\t\t4.hydra\n5.Tool-X\t\t6.DarkFly-Tool\n7.ngrok\t\t\t8.smsbomb\n9.servers\t\t10.sqlmap\n11.termux-style\t\t12.shellphish\n13.wireshark\t\t14.Tmux-Bunch\n15.calculator\t\t16.view code\n17.rename the script\n\t\t00.exit \n\nyour choice is : \e[0m\c"
 echo -e $fr"\c"
 read c
+else
+c=$1
+fi
+
 case $c in
-     00 )
+     0 )
 	cd   
 	echo -e $fg "\n******************************\n"   
 	echo -e $fg"***** thanks for using *******"        
@@ -417,32 +425,8 @@ echo -e $fg
 
       * ) 
 	echo -e $fy$br"\n**************************\n****** WRONG CHOICE ******\n**************************\nGood bye :)"$off""
-
-	bash install
 	;;
 esac
 
-if [ $c -ne 00 ]
-then
-echo -e $fy"Do you want to continue? (Y/N) : \c"
-echo -e $fg"\c"
-read cont
-case $cont in
-Y)
-bash install
-;;
-y)
-bash install
-;;
-n)
-echo -e $off
-exit
-;;
-N)
-echo -e $off
-exit
-;;
-esac
-echo -e $off
-fi
+
 
