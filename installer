@@ -19,6 +19,8 @@ bw='\033[0;47m'
 bk='\033[0;30m'
 un='\033[0;04m'
 it='\033[0;03m'
+C
+clear
 clear
 echo -e $off
 echo -e $wog"\t\t[============================================]"$off
@@ -153,7 +155,7 @@ my
 cd $folder 
 bash banner 2
 echo -e $fr"[>] Collecting requirements ..."$fp
-pip3 install --upgrade pip
+pip install --upgrade pip
 
 if [ -e $folder/pypip.py ]
 then
@@ -168,8 +170,8 @@ fi
 
 cd $folder
 chmod +x *
-pip3 install -r $folder/pip.txt
-pip3 install numpy anaconda conda matplotlib pandas panda sklearn jupyter
+pip install -r $folder/pip.txt
+pip install numpy anaconda conda matplotlib pandas panda sklearn jupyter
 
 
 echo -e $fr"[?] Press Enter to continue [?]"
@@ -221,7 +223,7 @@ my
 cd $folder
 bash banner 5
 apt install -y nmap
-pip3 install nmap
+pip install nmap
 
 
 echo -e $fr"[?] Press Enter to continue [?]"
@@ -247,7 +249,7 @@ my
 cd $folder
 bash banner 7
 echo -e " "$fg
-pip3 install slowloris
+pip install slowloris
 
 
 echo -e $fr"[?] Press Enter to continue [?]"
@@ -315,3 +317,4 @@ esac
 }
 
 my
+#written by rajdeep
