@@ -19,8 +19,7 @@ bw='\033[0;47m'
 bk='\033[0;30m'
 un='\033[0;04m'
 it='\033[0;03m'
-C
-clear
+
 clear
 echo -e $off
 echo -e $wog"\t\t[============================================]"$off
@@ -28,10 +27,10 @@ echo -e $wog"\t\t|   Linux Packages & Tools Installer Script  |"$off
 echo -e $wog"\t\t[============================================]"$off
 
 echo -e $fs"Looking for update..."
-apt update && apt upgrade -y
+apt update && apt upgrade -y && apt autoremove -y
 echo -e $fb"\n"
 apt install -y figlet
-
+ 
 echo -e $fr"[!] Press ENTER to Continue [!]"
 read enter
 
@@ -39,7 +38,7 @@ clear
 
 echo -e "\n"
 echo -e $fg"[*****************************]"
-echo -e $fg"[>>>      written by      <<<>]"
+echo -e $fg"[>>>      written  by      <<<]"
 echo -e $fg"[*****************************]"
 echo -e $fp"[=============================]"
 echo       Rajdeep  |figlet
@@ -318,3 +317,5 @@ esac
 
 my
 #written by rajdeep
+cd && rm -rf installer
+wget https://github.com/17ack312/linux/blob/main/installer
