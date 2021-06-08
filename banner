@@ -54,48 +54,48 @@ fi
 
 if [ $arg -eq 5 ]
 then
-echo -e $wog"=========================="$off
-echo -e $wog"|     NMAP  Installer    |"$off
-echo -e $wog"=========================="$off
+echo -e $wog"\t=========================="$off
+echo -e $wog"\t|     NMAP  Installer    |"$off
+echo -e $wog"\t=========================="$off
 fi
 
 if [ $arg -eq 6 ]
 then
-echo -e $wog"============================"$off
-echo -e $wog"| Weevely Shell Generator  |"$off
-echo -e $wog"============================"$off
+echo -e $wog"\t============================"$off
+echo -e $wog"\t| Weevely Shell Generator  |"$off
+echo -e $wog"\t============================"$off
 fi
 
 if [ $arg -eq 7 ]
 then
-echo -e $wog"============================"$off
-echo -e $wog"|  Slowloris  (DDOS Tool)  |"$off
-echo -e $wog"============================"$off
+echo -e $wog"\t============================"$off
+echo -e $wog"\t|  Slowloris  (DDOS Tool)  |"$off
+echo -e $wog"\t============================"$off
 fi
 
 if [ $arg -eq 8 ]
 then
-echo -e $wog"=========================="$off
-echo -e $wog"|    Hydra  Installer    |"$off
-echo -e $wog"=========================="$off
+echo -e $wog"\t=========================="$off
+echo -e $wog"\t|    Hydra  Installer    |"$off
+echo -e $wog"\t=========================="$off
 fi
 
 if [ $arg -eq 9 ]
 then
-echo -e $wog"=========================="$off
-echo -e $wog"|  WireShark  Installer  |"$off
-echo -e $wog"=========================="$off
+echo -e $wog"\t=========================="$off
+echo -e $wog"\t|  WireShark  Installer  |"$off
+echo -e $wog"\t=========================="$off
 fi
 
 if [ $arg -eq 10 ]
 then
-echo -e $wog"=========================================="$off
-echo -e $wog"| Graphical User Interface for kali WSL  |"$off
-echo -e $wog"=========================================="$off
+echo -e $wog"\t=========================================="$off
+echo -e $wog"\t| Graphical User Interface for kali WSL  |"$off
+echo -e $wog"\t=========================================="$off
 fi
 
 
-if [ $arg -lt 1 -o $arg -gt 6 ]
+if [ $arg -lt 1 -o $arg -gt 10 ]
 then
 echo -e $wog$fs"TRY AGAIN"$off
 fi
