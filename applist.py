@@ -28,6 +28,3 @@ q=input("\n[?]Do you want to view installer documentation ??(Y/n)\n[>] ").lower(
 if q=='y' or q=='yes':
     command="cat "+out
     os.system(command)
-
-command="rm "+file
-os.system(command)
