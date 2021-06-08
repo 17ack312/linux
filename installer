@@ -121,7 +121,7 @@ bash banner 1
 echo -e $fy"[!] Getting list ready ...\n"
 echo -e $fs"[?] Do you want to install pre-packages?(Y/n) : \c "
 read q
-if [ "$q"= y -o "$q"=y ]
+if [ "$q" = y -o "$q" = y ]
 then
 cd $folder
 wget https://raw.githubusercontent.com/17ack312/linux/main/install
