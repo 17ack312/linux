@@ -21,7 +21,7 @@ un='\033[0;04m'
 it='\033[0;03m'
 
 arg=$1
-
+clear
 echo -e $off"\t  "$off
 if [ $arg -eq 1 ]
 then
