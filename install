@@ -27,8 +27,8 @@ echo -e $fg"*******************************"
 echo -e $fp================================
 echo       Rajdeep  |figlet
 echo -e $fp================================
-
-if [ $1 -eq $NONE ]
+a=$1
+if [ $a -eq $NONE ]
 then
 echo -e $wog$fw"\nenter your choice: \n1.requirements\t\t2.nmap\n3.metasploit\t\t4.hydra\n5.Tool-X\t\t6.DarkFly-Tool\n7.ngrok\t\t\t8.smsbomb\n9.servers\t\t10.sqlmap\n11.termux-style\t\t12.shellphish\n13.wireshark\t\t14.Tmux-Bunch\n15.calculator\t\t16.view code\n17.rename the script\n\t\t00.exit \n\nyour choice is : \e[0m\c"
 echo -e $fr"\c"
