@@ -28,20 +28,21 @@ bash banner 2
 echo -e $fp"[^]Looking for available packages..."$fg
 apt install -y python2
 apt install -y python3
+apt install -y python
 apt install -y python3-pip
 pip3 install --upgrade pip
 if [ -e $folder/pypip.py ]
 then
 cd $folder
 chmod +x *
-python3 pypip.py $HOME
+python pypip.py $HOME
 else
 wget https://raw.githubusercontent.com/17ack312/linux/main/pypip.py
 chmod +x *
-python3 pypip.py $HOME
+python pypip.py $HOME
 fi
 
 cd
-pip3 install -r $folder/pip.txt
-pip3 install numpy anaconda conda matplotlib pandas panda sklearn jupyter
+pip install -r $folder/pip.txt
+#pip install numpy anaconda conda matplotlib pandas panda sklearn jupyter
 
