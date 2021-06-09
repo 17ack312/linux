@@ -4,7 +4,7 @@ import re
 
 home = sys.argv[1]
 file=home+"/temp/plist.txt"
-command="pip3 list >> "+file
+command="pip list >> "+file
 os.system(command)
 
 f=open(file,"r")
