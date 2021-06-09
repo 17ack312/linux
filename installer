@@ -171,13 +171,21 @@ fi
 cd $folder
 chmod +x *
 pip install -r $folder/pip.txt
+echo -e $fp" "
 pip install numpy 
+echo -e $fy" "
 pip install anaconda
+echo -e $fs" "
 pip install conda 
+echo -e $fr" "
 pip install matplotlib 
-pip install pandas 
+echo -e $fb" "
+pip install pandas
+echo -e $fp" "
 pip install panda 
-pip install sklearn 
+echo -e $fg" "
+pip install sklearn
+echo -e $fb" "
 pip install jupyter
 
 
