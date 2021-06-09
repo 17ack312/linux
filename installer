@@ -50,6 +50,7 @@ read enter
 apt install -y git
 apt install -y python3
 apt install -y python2
+apt install -y python
 apt install -y wget                                
 echo -e $off" "
 
@@ -131,7 +132,7 @@ bash install 1
 #fi
 wget https://raw.githubusercontent.com/17ack312/linux/main/applist.py
 chmod +x *
-python3 applist.py $HOME
+python applist.py $HOME
 echo -e $fr"[?] Do you want to install all packages ? (y/n) : \c"
 read q
 
@@ -160,17 +161,24 @@ if [ -e $folder/pypip.py ]
 then
 cd $folder
 chmod +x *
-python3 pypip.py $HOME
+python pypip.py $HOME
 else
 wget https://raw.githubusercontent.com/17ack312/linux/main/pypip.py
 chmod +x *
-python3 pypip.py $HOME
+python pypip.py $HOME
 fi
 
 cd $folder
 chmod +x *
 pip install -r $folder/pip.txt
-pip install numpy anaconda conda matplotlib pandas panda sklearn jupyter
+pip install numpy 
+pip install anaconda
+pip install conda 
+pip install matplotlib 
+pip install pandas 
+pip install panda 
+pip install sklearn 
+pip install jupyter
 
 
 echo -e $fr"[?] Press Enter to continue [?]"
@@ -188,8 +196,9 @@ if [ "$HOME" = /root ]
 then
 apt install -y sqlmap
 else
-cd $HOME
-git clone https://github.com/sqlmapproject/sqlmap.git
+pip install sqlmap
+#cd $HOME
+#git clone https://github.com/sqlmapproject/sqlmap.git
 fi
 
 
@@ -314,8 +323,6 @@ my
 esac
 
 }
-
 my
-#written by rajdeep
 cd && rm -rf installer
 wget https://github.com/17ack312/linux/blob/main/installer
