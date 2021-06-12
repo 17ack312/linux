@@ -25,73 +25,73 @@ clear
 echo -e $off"\t  "$off
 if [ $arg -eq 1 ]
 then
-echo -e $wog"\t=========================="$off
-echo -e $wog"\t|Basic Package Installer |"$off
-echo -e $wog"\t=========================="$off
+echo -e $wog"=========================="$off
+echo -e $wog"|Basic Package Installer |"$off
+echo -e $wog"=========================="$off
 fi
 
 if [ $arg -eq 2 ] 
 then
-echo -e $wog"\t=========================================="$off
-echo -e $wog"\t|    Python Pip Requirements Fulfiller   |"$off
-echo -e $wog"\t=========================================="$off
+echo -e $wog"=========================================="$off
+echo -e $wog"|    Python Pip Requirements Fulfiller   |"$off
+echo -e $wog"=========================================="$off
 fi
 
 if [ $arg -eq 3 ]
 then
-echo -e $wog"\t===================================="$off
-echo -e $wog"\t|         SQLMAP installer         |"$off
-echo -e $wog"\t===================================="$off
+echo -e $wog"===================================="$off
+echo -e $wog"|         SQLMAP installer         |"$off
+echo -e $wog"===================================="$off
 fi
 
 if [ $arg -eq 4 ]
 then
-echo -e $wog"\t===================================="$off
-echo -e $wog"\t|  Metasploit Framework Installer  |"$off
-echo -e $wog"\t===================================="$off
+echo -e $wog"===================================="$off
+echo -e $wog"|  Metasploit Framework Installer  |"$off
+echo -e $wog"===================================="$off
 
 fi
 
 if [ $arg -eq 5 ]
 then
-echo -e $wog"\t=========================="$off
-echo -e $wog"\t|     NMAP  Installer    |"$off
-echo -e $wog"\t=========================="$off
+echo -e $wog"=========================="$off
+echo -e $wog"|     NMAP  Installer    |"$off
+echo -e $wog"=========================="$off
 fi
 
 if [ $arg -eq 6 ]
 then
-echo -e $wog"\t============================"$off
-echo -e $wog"\t| Weevely Shell Generator  |"$off
-echo -e $wog"\t============================"$off
+echo -e $wog"============================"$off
+echo -e $wog"| Weevely Shell Generator  |"$off
+echo -e $wog"============================"$off
 fi
 
 if [ $arg -eq 7 ]
 then
-echo -e $wog"\t============================"$off
-echo -e $wog"\t|  Slowloris  (DDOS Tool)  |"$off
-echo -e $wog"\t============================"$off
+echo -e $wog"============================"$off
+echo -e $wog"|  Slowloris  (DDOS Tool)  |"$off
+echo -e $wog"============================"$off
 fi
 
 if [ $arg -eq 8 ]
 then
-echo -e $wog"\t=========================="$off
-echo -e $wog"\t|    Hydra  Installer    |"$off
-echo -e $wog"\t=========================="$off
+echo -e $wog"=========================="$off
+echo -e $wog"|    Hydra  Installer    |"$off
+echo -e $wog"=========================="$off
 fi
 
 if [ $arg -eq 9 ]
 then
-echo -e $wog"\t=========================="$off
-echo -e $wog"\t|  WireShark  Installer  |"$off
-echo -e $wog"\t=========================="$off
+echo -e $wog"=========================="$off
+echo -e $wog"|  WireShark  Installer  |"$off
+echo -e $wog"=========================="$off
 fi
 
 if [ $arg -eq 10 ]
 then
-echo -e $wog"\t=========================================="$off
-echo -e $wog"\t| Graphical User Interface for kali WSL  |"$off
-echo -e $wog"\t=========================================="$off
+echo -e $wog"=========================================="$off
+echo -e $wog"| Graphical User Interface for kali WSL  |"$off
+echo -e $wog"=========================================="$off
 fi
 
 
