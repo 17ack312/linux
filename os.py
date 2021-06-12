@@ -35,3 +35,6 @@ for i in range(len(o)):
         print(o[i])
 
 os.system("rm -rf "+file)
+
+print(home)
+print(spath)
