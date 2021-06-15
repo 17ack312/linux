@@ -226,7 +226,7 @@ read q
 
 if [ "$q" = y -o "$q" = Y ]
 then
-cd $folder
+cd $dir
 chmod +x *
 bash applist.txt
 fi
