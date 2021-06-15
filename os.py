@@ -23,7 +23,7 @@ else:
 
 file=home+"/os.txt"
 os.system("neofetch --stdout | grep \"Android\" > "+file)
-os.system("neofetch --stdout | grep \"Kali\" > "+file)
+os.system("neofetch --stdout | grep \"Kali\" >> "+file)
 f=open(file,"r")
 y=f.read().lower()
 
