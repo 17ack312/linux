@@ -22,8 +22,8 @@ else:
     os.system("apt install -y neofetch")
 
 file=home+"/os.txt"
-os.system("neofetch --stdout > "+file)
-
+os.system("neofetch --stdout | grep \"Android\" > "+file)
+os.system("neofetch --stdout | grep \"Kali\" > "+file)
 f=open(file,"r")
 y=f.read().lower()
 
