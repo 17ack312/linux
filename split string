@@ -1,0 +1,1 @@
+STRING=`echo $PATH`;VALUES=(${STRING//:/ });for i in "${VALUES[@]}"; do     echo $i; done
