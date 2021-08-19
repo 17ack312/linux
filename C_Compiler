@@ -34,4 +34,4 @@ check clang
 
 echo "use 'c' then filename to use c complier "
 
-rm C_Compiler
+rm C_Compiler c
