@@ -1,0 +1,33 @@
+
+while IFS= read -d ':' t
+do
+	path[$i]=`echo $t | grep 'bin'`
+#	echo ${path[$i]}
+((i++))
+done <<< $PATH
+
+check(){
+flag=0
+for i in ${path[*]}
+do
+#	echo $i
+	if [ -f $i/$1 ]
+	then
+		flag=1
+		break
+	fi
+done
+
+if ((flag==0))
+then
+	apt install -y $1
+fi
+
+}
+
+check gcc
+check g++
+check clang
+
+g++ $1
+./a.out
