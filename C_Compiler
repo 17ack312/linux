@@ -14,6 +14,7 @@ for i in ${path[*]}
 do
 #	echo $i
 	echo "chmod 777 $1 && g++ $1 && ./a.out" > $i/c 
+	chmod +x $i/c
 	if [ -f $i/$1 ]
 	then
 		flag=1
