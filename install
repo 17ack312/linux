@@ -199,6 +199,7 @@ check emacs neovim nano gedit vim bluefish kate vim-gtk
 check zip gzip bzip2 p7zip unzip unrar tar
 check mtools tmux tmate debianutils nodejs
 check cowsay sl figlet toilet fish 
+check sslscan sslyze
 curl -sSL https://raw.githubusercontent.com/sundowndev/phoneinfoga/master/support/scripts/install | bash
 # Check the binary
 ./phoneinfoga version
