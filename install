@@ -1,4 +1,4 @@
-
+echo "deb https://http.kali.org/kali kali-rolling main non-free contrib" > /etc/apt/sources.list
 #Reset          - 0 - Back to normal (remove all styles)
 #Bold           - 1  - Bold the text
 #Underline      - 4  - Underline text
